@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: YELP
+    database: RAW
+    tables:
+      - name: YELP_ACADEMIC_DATASET_BUSINESS
+
+  - name: FIVETRAN
+    database: RAW
+    tables:
+      - name: ACCOUNT
