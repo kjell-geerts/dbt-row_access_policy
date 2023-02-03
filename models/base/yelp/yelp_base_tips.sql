@@ -1,0 +1,1 @@
+select * from {{ source('YELP', 'YELP_ACADEMIC_DATASET_TIP') }}
