@@ -41,3 +41,7 @@ models:
       database: BASE
       schema: STAGING
       +materialized: view
+    
+    dwh:
+      database: DEVELOPMENT
+      +materialized: table
