@@ -14,5 +14,6 @@ select
     yelp_business_latitude as bus_latitude,
     yelp_business_stars as bus_stars,
     yelp_business_review_count as bus_review_count,
-    date(yelp_business_synced) as bus_synced
+    date(yelp_business_synced) as bus_synced,
+    to_array(yelp_business_state) as bus_sec_state
 from stg_business

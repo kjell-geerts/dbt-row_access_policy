@@ -45,3 +45,7 @@ models:
     dwh:
       database: DEVELOPMENT
       +materialized: table
+    
+    datamart:
+      database: REPORTING
+      +materialized: view
