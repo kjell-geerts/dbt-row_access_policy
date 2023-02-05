@@ -6,6 +6,7 @@ sources:
     tables:
       - name: YELP_ACADEMIC_DATASET_BUSINESS
       - name: YELP_ACADEMIC_DATASET_TIP
+      - name: YELP_ACADEMIC_DATASET_USER
 
   - name: FIVETRAN
     database: RAW
