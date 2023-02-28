@@ -1,3 +1,11 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='bus_d_sk'
+    )
+}}
+
+
 WITH stg_business AS(
     SELECT * FROM {{ ref('yelp_base_business') }}
 )
