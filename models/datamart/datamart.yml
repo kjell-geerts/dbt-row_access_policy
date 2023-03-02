@@ -2,14 +2,17 @@ version: 2
 
 models:
   - name: yelp_tips_datamart
-    description: Datamart for Business Dimension
+    description: Datamart for Tips Analyses
     columns:
-      - name: bus_sec_state
+      - name: tps_sec_state
         description: Security column on state
         meta:
           row_access_policy: state_policy
 
-      - name: bus_sec_usr
-        description: Security column on user
+  - name: yelp_dm_d_users
+    description: Datamart for User Dimension
+    columns:
+      - name: usr_sec_state
+        description: Security column on state
         meta:
-          row_access_policy: user_policy
+          row_access_policy: state_policy

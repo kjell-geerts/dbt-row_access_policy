@@ -1,7 +1,7 @@
-{% macro create_sec_policies() %}
+{% macro create_row_access_policies() %}
 use database security;
 create schema if not exists security.sec;
 
-{{sec_allowed_state()}};
+    {{udf_allowed_state()}}
 
 {% endmacro %}
