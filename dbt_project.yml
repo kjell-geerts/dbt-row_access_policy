@@ -60,8 +60,8 @@ quoting:
   identifier: false
 
 on-run-start:
-    - '{{unapply_sec_policies()}}'
+    - '{{unapply_row_access_policies()}}'
 
 on-run-end:
-    - '{{create_sec_policies()}}'
-    - '{{apply_sec_policies()}}'
+    - '{{create_row_access_policies()}}'
+    - '{{apply_row_access_policies()}}'
