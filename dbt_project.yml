@@ -58,3 +58,10 @@ quoting:
   database: false
   schema: false
   identifier: false
+
+on-run-start:
+    - '{{unapply_sec_policies()}}'
+
+on-run-end:
+    - '{{create_sec_policies()}}'
+    - '{{apply_sec_policies()}}'

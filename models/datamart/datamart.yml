@@ -1,10 +1,15 @@
 version: 2
 
 models:
-  - name: rap_test
+  - name: yelp_tips_datamart
     description: Datamart for Business Dimension
     columns:
       - name: bus_sec_state
         description: Security column on state
         meta:
-          row_access_policy: bus_sec_state
+          row_access_policy: state_policy
+
+      - name: bus_sec_usr
+        description: Security column on user
+        meta:
+          row_access_policy: user_policy
