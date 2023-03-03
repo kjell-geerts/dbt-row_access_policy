@@ -7,9 +7,3 @@ sources:
       - name: YELP_ACADEMIC_DATASET_BUSINESS
       - name: YELP_ACADEMIC_DATASET_TIP
       - name: YELP_ACADEMIC_DATASET_USER
-
-  - name: SECURITY
-    database: BASE
-    schema: SEC
-    tables:
-      - name: YELP_SECURITY

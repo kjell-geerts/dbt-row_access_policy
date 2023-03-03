@@ -1,7 +1,9 @@
 {% macro create_row_access_policies() %}
-use database security;
-create schema if not exists security.sec;
+    USE DATABASE {{var('security_database')}}
+    ;
+    CREATE SCHEMA IF NOT EXISTS {{var('security_database')}}.{{var('security_schema')}};
 
-    {{udf_allowed_state()}}
-
+     {% if execute and env_var('DBT_RAP')=='Y' %}
+        {{udf_allowed_state()}}
+    {% endif %}
 {% endmacro %}
