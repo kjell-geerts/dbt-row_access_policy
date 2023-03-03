@@ -3,7 +3,7 @@
         {%- for node in graph.nodes.values()| selectattr("resource_type", "equalto", "model") -%}
             {% for column in  node.columns.values() %}
                 {% if column.meta.row_access_policy| length > 0 %}
-                    ALTER TABLE reporting.{{target.schema}}.{{node.name}} add row access policy {{var('security_database')}}.{{var('security_schema')}}.{{column.meta.row_access_policy}} ON ({{column.name}});
+                    ALTER TABLE {{node.database}}.{{node.schema}}.{{node.name}} add row access policy {{column.meta.row_access_policy}} ON ({{column.name}});
                 {% endif %}
             {%- endfor -%}
         {% endfor %}
