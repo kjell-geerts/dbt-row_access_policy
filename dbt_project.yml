@@ -31,10 +31,6 @@ models:
     reporting:
       schema: REPORTING
       +materialized: view
-    
-    security:
-      schema: SECURITY
-      +materialized: table
         
 quoting:
   database: false
