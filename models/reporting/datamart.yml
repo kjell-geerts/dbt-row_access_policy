@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: yelp_tips_datamart
-    description: Datamart for Tips Analyses
+    description: Analysis for Yelp tips
     columns:
       - name: bus_cat_sec_name
         description: Security column on business category
@@ -13,6 +13,12 @@ models:
         description: Security column on state
         meta:
           row_access_policy: state_business_category_policy
+
+  - name: yelp_d_business
+    description: Datamart for the business dimension
+    columns:
+      - name: bus_name
+        description: Business name
 
   - name: yelp_dm_d_users
     description: Datamart for User Dimension
