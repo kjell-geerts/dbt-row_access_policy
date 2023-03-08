@@ -1,7 +1,7 @@
 {% macro create_row_access_policies() %}
      {% if execute and env_var('DBT_RAP')=='Y' %}
         
-        -- CREATE SECURITYT TABLE
+        -- CREATE SECURITY TABLE
         {{create_security_table()}}
         
         -- CREATE UDFS
@@ -12,6 +12,5 @@
         {{rap_state_policy()}}
         {{rap_state_business_category_policy()}}
 
-        
     {% endif %}
 {% endmacro %}

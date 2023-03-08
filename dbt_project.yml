@@ -47,3 +47,4 @@ on-run-start:
 on-run-end:
     - '{{create_row_access_policies()}}'
     - '{{apply_row_access_policies()}}'
+    - '{{create_rap_mapping_table()}}'
