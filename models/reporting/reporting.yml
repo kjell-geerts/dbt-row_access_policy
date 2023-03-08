@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: yelp_tips_datamart
+  - name: yelp_tips_reporting
     description: Analysis for Yelp tips
     columns:
       - name: bus_cat_sec_name
