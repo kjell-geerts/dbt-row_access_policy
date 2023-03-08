@@ -9,7 +9,7 @@
                         where table_owner IS NOT NULL AND TABLE_NAME = '{{node.name |upper}}';
                 {%- endcall -%}
                 {% if load_result("table_check")["data"][0][0] > 0 %}
-                                    {%- call statement("row_access_policies_check", fetch_result=True) -%}
+                {%- call statement("row_access_policies_check", fetch_result=True) -%}
                 SELECT COUNT(policy_name)
                 FROM
                     table(
