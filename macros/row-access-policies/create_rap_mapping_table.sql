@@ -45,7 +45,8 @@
             REF_ENTITY_NAME VARCHAR(255),
             REF_ENTITY_DOMAIN VARCHAR(255),
             REF_ENTITY_COLUMN VARCHAR(255),
-            POLICY_STATUS VARCHAR(255)
+            POLICY_STATUS VARCHAR(255),
+            UPDATE_TIME DATETIME
         );
 
         SET var_update_time  = CURRENT_TIMESTAMP;
