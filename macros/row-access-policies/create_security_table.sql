@@ -13,8 +13,13 @@
     (ID, COL_NAME, ALLOWED_VALUE, USERNAME)
     VALUES
     (1, 'STATE', 'SC', 'bjorn.cornelis@biztory.be'),
-    (1, 'STATE', 'WI', 'wim.kegels@biztory.be'),
-    (1, 'STATE', 'IL', 'wim.kegels@biztory.be'),
-    (1, 'STATE', 'AZ', 'wim.kegels@biztory.be'),
-    (1, 'STATE', 'ALL VALUES', 'kjell.geerts@biztory.be');
+    (2, 'STATE', 'WI', 'wim.kegels@biztory.be'),
+    (3, 'STATE', 'IL', 'wim.kegels@biztory.be'),
+    (4, 'STATE', 'AZ', 'wim.kegels@biztory.be'),
+    (5, 'STATE', 'ALL VALUES', 'kjell.geerts@biztory.be'),
+    (6, 'BUSINESS_CATEGORY', 'Italian', 'wim.kegels@biztory.be'),
+    (7, 'BUSINESS_CATEGORY', 'Burgers', 'wim.kegels@biztory.be'),
+    (8, 'BUSINESS_CATEGORY', 'Vegan', 'michiel.smulders@biztory.be'),
+    (9, 'BUSINESS_CATEGORY', 'ALL VALUES', 'kjell.geerts@biztory.be')
+    ;
 {% endmacro %}
