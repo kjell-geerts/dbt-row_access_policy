@@ -19,6 +19,7 @@
     (5, 'STATE', 'ALL VALUES', 'kjell.geerts@biztory.be'),
     (6, 'BUSINESS_CATEGORY', 'Italian', 'wim.kegels@biztory.be'),
     (7, 'BUSINESS_CATEGORY', 'Burgers', 'wim.kegels@biztory.be'),
-    (8, 'BUSINESS_CATEGORY', 'Vegan', 'michiel.smulders@biztory.be')
+    (8, 'BUSINESS_CATEGORY', 'Vegan', 'michiel.smulders@biztory.be'),
+    (9, 'BUSINESS_CATEGORY', 'ALL VALUES', 'kjell.geerts@biztory.be')
     ;
 {% endmacro %}

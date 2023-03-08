@@ -1,9 +1,10 @@
-{% macro unapply_row_access_policies() %}
+{% macro test_query() %}
     {% if execute %}
     {% set materialization_map = {"table": "table", "view": "view", "incremental": "table", "snapshot": "table"} %}
         {%- for node in graph.nodes.values()| selectattr("resource_type", "equalto", "model") -%}
-             {% if node.columns  | length > 0 %}
             {% set materialization = materialization_map[node.config.get("materialized")] %}
+            {% for column in  node.columns.values() %}
+
                 {%- call statement("row_access_policies_check", fetch_result=True) -%}
                 SELECT COUNT(policy_name)
                 FROM
@@ -15,10 +16,13 @@
                     )
                 {%- endcall -%}
                 {%- set number_of_row_access_policies = load_result("row_access_policies_check")["data"][0][0] -%}
-                {% if number_of_row_access_policies > 0 %}
-                        ALTER {{materialization}} IF EXISTS {{node.database}}.{{node.schema}}.{{node.name}} DROP ALL ROW ACCESS POLICIES;
-             {% endif %}
-             {% endif %}
+                {% if number_of_row_access_policies > 0     %}
+                    {% if column.meta.row_access_policy| length > 0 %}
+                        {{node.database}}{{node.schema}}{{node.name}}
+                    {% endif %}
+                {% endif %} 
+            {%- endfor -%}
         {% endfor %}
     {% endif %}
 {% endmacro %}
+
