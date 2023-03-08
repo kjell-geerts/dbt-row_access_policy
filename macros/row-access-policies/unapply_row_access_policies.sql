@@ -5,7 +5,7 @@
              {% if node.columns  | length > 0 %}
             {% set materialization = materialization_map[node.config.get("materialized")] %}
                 {%- call statement("table_check", fetch_result=True) -%}
-                    SELECT COUNT(*) FROM DEVELOPMENT.INFORMATION_SCHEMA.TABLES
+                    SELECT COUNT(*) FROM {{node.database}}.INFORMATION_SCHEMA.TABLES
                         where table_owner IS NOT NULL AND TABLE_NAME = '{{node.name |upper}}';
                 {%- endcall -%}
                 {% if load_result("table_check")["data"][0][0] > 0 %}
