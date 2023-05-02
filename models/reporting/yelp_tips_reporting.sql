@@ -19,6 +19,7 @@ dwh_business_categories AS(
 )
 
 SELECT
+    tps_date as "Tip Date",
     usr_id as "User ID",
     usr_name as "User Name",
     usr_yelping_since as "User Yelping Since",
@@ -40,8 +41,7 @@ SELECT
     array_to_string(bus_cat_name,', ') as "Business Categories",
     tps_sec_state,
     bus_cat_sec_name,
-    tps_f_sk,
-    'test' AS "test"
+    tps_f_sk
 from dwh_tips t
 inner join dwh_business b
 on t.tps_bus_d_sk = b.bus_d_sk

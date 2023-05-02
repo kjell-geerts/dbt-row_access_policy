@@ -13,6 +13,7 @@ select
     HASH(tps.yelp_tips_user_id) as tps_usr_d_sk,
     HASH(tps.yelp_tips_business_id) as tps_bus_d_sk,
     HASH(tps.yelp_tips_date) as tps_dt_d_sk,
+    dateadd(year, 6, tps.yelp_tips_date) as tps_date,
     date(tps.yelp_tips_synced) as tps_dt_synced_d_sk,
     tps.yelp_tips_likes as tps_likes,
     bus.yelp_business_state as tps_sec_state
