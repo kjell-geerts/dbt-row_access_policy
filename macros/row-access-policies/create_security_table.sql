@@ -25,7 +25,7 @@
         ('BUSINESS_CATEGORY', 'Vegan', 'michiel.smulders@biztory.be', getvariable('VAR_UPDATE_TIME')),
         ('BUSINESS_CATEGORY', 'ALL VALUES', 'kjell.geerts@biztory.be', getvariable('VAR_UPDATE_TIME'))
         ('BUSINESS_CATEGORY', 'ALL VALUES', 'artur.lucas@biztory.be', getvariable('VAR_UPDATE_TIME')),
-        ('STATE', 'ALL VALUES', 'artur.lucas@biztory.be', getvariable('VAR_UPDATE_TIME')),
+        ('STATE', 'ALL VALUES', 'artur.lucas@biztory.be', getvariable('VAR_UPDATE_TIME'))
         ;
     {% endif %}
 {% endmacro %}
