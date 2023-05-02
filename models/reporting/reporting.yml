@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: yelp_tips_reporting
-    description: Analysis for Yelp tips
+    description: This table is the analysis for Yelp Tips
     columns:
       - name: bus_cat_sec_name
         description: Security column on business category
@@ -13,6 +13,10 @@ models:
         description: Security column on state
         meta:
           row_access_policy: state_business_category_policy
+
+      - name: Tip Date
+        description: This is the date the tip arrived into the source system.
+      
 
   - name: yelp_d_business
     description: Datamart for the business dimension
@@ -27,3 +31,21 @@ models:
         description: Security column on state
         meta:
           row_access_policy: state_policy
+
+exposures:
+
+  - name: Business Review Dashboard
+    label: Business Review Dashboard
+    type: dashboard
+    maturity: high
+    url: https://dub01.online.tableau.com/#/site/biztorybenelux/views/Case1BusinessReviewDashboard/BusinessReviewDashboard
+    description: >
+      This dashboard shows the business reviews.
+
+    depends_on:
+      - ref('yelp_tips_reporting')
+
+    owner:
+      name: Kjell Geerts
+      email: kjell.geerts@biztory.be
+
