@@ -35,7 +35,7 @@ models:
 exposures:
 
   - name: Business Review Dashboard
-    label: This dashboard shows the business reviews
+    label: Business Review Dashboard
     type: dashboard
     maturity: high
     url: https://dub01.online.tableau.com/#/site/biztorybenelux/views/Case1BusinessReviewDashboard/BusinessReviewDashboard
