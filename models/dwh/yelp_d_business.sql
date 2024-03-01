@@ -12,7 +12,7 @@ WITH stg_business AS(
 select 
     HASH(yelp_business_id) as bus_d_sk,
     yelp_business_id as bus_id,
-    yelp_business_name as bus_name,
+    yelp_business_name as bus,
     yelp_business_type as bus_type,
     yelp_business_open as bus_open,
     yelp_business_full_address as bus_address,
