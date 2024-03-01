@@ -4,6 +4,16 @@ models:
   - name: yelp_tips_reporting
     description: This table is the analysis for Yelp Tips
     columns:
+      - name: TPS_F_SK
+        description: Technical SID
+        tests:
+        - unique:
+            config:
+              severity: warn
+        - not_null:
+            config:
+              severity: warn
+
       - name: bus_cat_sec_name
         description: Security column on business category
         meta:
@@ -14,7 +24,7 @@ models:
         meta:
           row_access_policy: state_business_category_policy
 
-      - name: Tip Date
+      - name: "Tip Date"
         description: This is the date the tip arrived into the source system.
       
 
